@@ -81,6 +81,8 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding-top: 4rem;
+  width: 90%;
+  margin-inline: auto;
 }
 
 .plan {
