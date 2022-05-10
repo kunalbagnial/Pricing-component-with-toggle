@@ -4,7 +4,7 @@
 }
 
 .section-pricing h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: var(--grayish-blue);
   text-align: center;
   margin-bottom: 2.25rem;
@@ -23,6 +23,7 @@
 
 .toggle__label {
   color: var(--light-grayish-blue);
+  font-size: 1rem;
   letter-spacing: 0.25px;
 }
 
@@ -127,6 +128,7 @@
 }
 
 .plan--professional {
+  height: 28rem;
   background-color: transparent;
   background-image: linear-gradient(to bottom right, var(--gradient));
   color: var(--white);

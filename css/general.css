@@ -27,13 +27,15 @@ body {
   background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: top 100% left, top right;
+  display: grid;
+  align-items: center;
 }
 
 .container {
   width: 100%;
-  max-width: 67rem;
+  max-width: 70rem;
   margin-inline: auto;
-  padding-inline: 1.25rem;
+  padding-inline: 2rem;
 }
 
 .btn:link,
