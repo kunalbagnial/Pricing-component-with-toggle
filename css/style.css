@@ -1,0 +1,143 @@
+.section-pricing {
+  padding-block-start: 4rem;
+  padding-block-end: 6rem;
+}
+
+.section-pricing h1 {
+  font-size: 1.75rem;
+  color: var(--grayish-blue);
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+/******************/
+/* TOGGLE SWITCH */
+/******************/
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.toggle__label {
+  color: var(--light-grayish-blue);
+  letter-spacing: 0.25px;
+}
+
+.toggle__switch {
+  display: inline-block;
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.toggle__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, var(--gradient));
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle__slider::before {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  transition: 0.3s;
+}
+
+.toggle__switch input:checked + .toggle__slider::before {
+  transform: translateX(100%);
+}
+
+.toggle__switch:hover .toggle__slider {
+  opacity: 0.5;
+}
+
+/**************/
+/* PRICING */
+/**************/
+
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.plan {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  color: var(--grayish-blue);
+}
+
+.plan__name {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan__price {
+  font-size: 4rem;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.plan__price span {
+  font-size: 2.25rem;
+}
+
+.plan__list {
+  list-style: none;
+}
+
+.plan__list li {
+  padding-block: 1rem;
+  border-top: 1px solid var(--light-grayish-blue);
+}
+
+.plan__list li:last-child {
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.plan__info {
+  margin-top: 1.75rem;
+}
+
+.plan--professional {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom right, var(--gradient));
+  color: var(--white);
+  padding-block: 3rem;
+  transform: scale(1.03);
+}
+
+.plan--professional .plan__price {
+  color: var(--white);
+}
+
+.plan--professional .plan__list li {
+  border-color: var(--light-violet);
+}
