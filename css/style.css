@@ -1,43 +1,43 @@
-.section-pricing {
-  padding-block-start: 4rem;
-  padding-block-end: 6rem;
+/*************/
+/* HEADER */
+/*************/
+
+.header {
+  text-align: center;
+  padding: 4rem 0;
 }
 
-.section-pricing h1 {
-  font-size: 2rem;
+.header h1 {
   color: var(--grayish-blue);
-  text-align: center;
   margin-bottom: 2.25rem;
 }
 
-/******************/
-/* TOGGLE SWITCH */
-/******************/
+/*************/
+/* TOGGLE */
+/*************/
 
 .toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .toggle__label {
   color: var(--light-grayish-blue);
-  font-size: 1rem;
-  letter-spacing: 0.25px;
 }
 
 .toggle__switch {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 3.5rem;
   height: 2rem;
 }
 
-.toggle__switch input {
+.toggle__checkbox {
   opacity: 0;
-  width: 0;
   height: 0;
+  width: 0;
 }
 
 .toggle__slider {
@@ -49,67 +49,74 @@
   background-image: linear-gradient(to right, var(--gradient));
   border-radius: 2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   transition: 0.3s;
 }
 
 .toggle__slider::before {
-  content: "";
   position: absolute;
-  background-color: var(--white);
-  width: 1.5rem;
+  content: "";
   height: 1.5rem;
-  border-radius: 50%;
+  width: 1.5rem;
   left: 0.25rem;
-  bottom: 0.25rem;
+  background-color: var(--white);
+  border-radius: 50%;
   transition: 0.3s;
 }
 
-.toggle__switch input:checked + .toggle__slider::before {
+.toggle__checkbox:checked + .toggle__slider::before {
   transform: translateX(100%);
 }
 
-.toggle__switch:hover .toggle__slider {
-  opacity: 0.5;
-}
-
-/**************/
+/*************/
 /* PRICING */
-/**************/
+/*************/
 
-.pricing-plans {
+.pricing-container {
+  width: 100%;
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding-top: 4rem;
-  width: 90%;
-  margin-inline: auto;
 }
 
 .plan {
   background-color: var(--white);
-  border-radius: 0.5rem;
+  color: var(--grayish-blue);
   text-align: center;
   padding: 2rem;
-  color: var(--grayish-blue);
+}
+
+.plan:nth-child(1) {
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+}
+
+.plan:nth-child(3) {
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 
 .plan__name {
-  font-size: 1rem;
+  font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
 
 .plan__price {
-  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 4.5rem;
   color: var(--dark-grayish-blue);
   margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
 .plan__price span {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 .plan__list {
@@ -117,7 +124,7 @@
 }
 
 .plan__list li {
-  padding-block: 1rem;
+  padding-block: 1.25rem;
   border-top: 1px solid var(--light-grayish-blue);
 }
 
@@ -126,16 +133,15 @@
 }
 
 .plan__info {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
 }
 
 .plan--professional {
-  height: 28rem;
   background-color: transparent;
   background-image: linear-gradient(to bottom right, var(--gradient));
   color: var(--white);
-  padding-block: 3rem;
-  transform: scale(1.03);
+  padding-block: 3.5rem;
+  border-radius: 0.625rem;
 }
 
 .plan--professional .plan__price {
@@ -143,5 +149,19 @@
 }
 
 .plan--professional .plan__list li {
-  border-color: var(--light-violet);
+  border-color: var(--light-blue);
+}
+
+/*************/
+/* FOOTER */
+/*************/
+
+.footer {
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 0.8125rem;
+  color: var(--dark-grayish-blue);
 }

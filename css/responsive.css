@@ -1,0 +1,42 @@
+@media (max-width: 59em) {
+  body {
+    background-image: url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: right -12rem top -2rem;
+  }
+
+  .pricing-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .plan {
+    width: 50%;
+    justify-self: center;
+  }
+
+  .plan:nth-child(1),
+  .plan:nth-child(3) {
+    border-radius: 0.625rem;
+  }
+
+  .plan--professional {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .plan {
+    width: 60%;
+  }
+}
+
+@media (max-width: 34em) {
+  .plan {
+    width: 100%;
+  }
+
+  .plan__price {
+    font-size: 4.25rem;
+  }
+}

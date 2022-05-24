@@ -1,13 +1,13 @@
-const inputEl = document.querySelector("#checkbox");
-const priceMonthly = document.querySelectorAll(".plan__monthly");
-const priceAnually = document.querySelectorAll(".plan__anually");
+const toggler = document.querySelector(".toggle__checkbox");
+const annualPlan = document.querySelectorAll(".plan__annually");
+const monthlyPlan = document.querySelectorAll(".plan__monthly");
 
-inputEl.addEventListener("click", function (e) {
-  if (e.target.checked == true) {
-    priceMonthly.forEach((element) => element.removeAttribute("hidden"));
-    priceAnually.forEach((element) => element.setAttribute("hidden", true));
+toggler.addEventListener("click", (e) => {
+  if (e.target.checked === false) {
+    annualPlan.forEach((element) => element.removeAttribute("hidden"));
+    monthlyPlan.forEach((element) => element.setAttribute("hidden", true));
   } else {
-    priceMonthly.forEach((element) => element.setAttribute("hidden", true));
-    priceAnually.forEach((element) => element.removeAttribute("hidden"));
+    annualPlan.forEach((element) => element.setAttribute("hidden", true));
+    monthlyPlan.forEach((element) => element.removeAttribute("hidden"));
   }
 });
