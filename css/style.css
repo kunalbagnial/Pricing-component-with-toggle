@@ -28,8 +28,8 @@
 }
 
 .toggle__switch {
-  position: relative;
   display: inline-block;
+  position: relative;
   width: 3.5rem;
   height: 2rem;
 }
@@ -67,6 +67,10 @@
 
 .toggle__checkbox:checked + .toggle__slider::before {
   transform: translateX(100%);
+}
+
+.toggle__switch:hover .toggle__slider {
+  opacity: 0.5;
 }
 
 /*************/
@@ -157,11 +161,15 @@
 /*************/
 
 .footer {
-  padding-block: 4rem;
+  padding: 4rem 0 2rem;
   text-align: center;
 }
 
 .footer__text {
   font-size: 0.8125rem;
   color: var(--dark-grayish-blue);
+}
+
+.footer__text a {
+  color: hsl(228, 45%, 44%);
 }
