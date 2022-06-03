@@ -1,26 +1,19 @@
-/*************/
-/* HEADER */
-/*************/
-
 .header {
   text-align: center;
-  padding: 4rem 0;
+  padding-block: 4rem;
 }
 
 .header h1 {
+  font-size: 2rem;
   color: var(--grayish-blue);
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
 }
-
-/*************/
-/* TOGGLE */
-/*************/
 
 .toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .toggle__label {
@@ -29,15 +22,15 @@
 
 .toggle__switch {
   display: inline-block;
-  position: relative;
   width: 3.5rem;
   height: 2rem;
+  position: relative;
 }
 
 .toggle__checkbox {
-  opacity: 0;
-  height: 0;
   width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .toggle__slider {
@@ -51,35 +44,35 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition: 0.3s;
 }
 
 .toggle__slider::before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 1.5rem;
   width: 1.5rem;
   left: 0.25rem;
   background-color: var(--white);
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 0.2s;
+}
+
+.toggle__slider:hover {
+  opacity: 0.7;
+}
+
+.toggle__checkbox:focus-visible + .toggle__slider {
+  outline: 3px solid var(--dark-grayish-blue);
+  outline-offset: 2px;
 }
 
 .toggle__checkbox:checked + .toggle__slider::before {
-  transform: translateX(100%);
+  transform: translateX(1.5rem);
 }
-
-.toggle__switch:hover .toggle__slider {
-  opacity: 0.5;
-}
-
-/*************/
-/* PRICING */
-/*************/
 
 .pricing-container {
   width: 100%;
-  max-width: 70rem;
+  max-width: 68.75rem;
   margin-inline: auto;
   padding-inline: 1.5rem;
   display: grid;
@@ -88,12 +81,12 @@
 }
 
 .plan {
+  padding: 2rem;
+  text-align: center;
   background-color: var(--white);
   color: var(--grayish-blue);
-  text-align: center;
-  padding: 2rem;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(234, 13%, 49%, 0.22);
 }
-
 .plan:nth-child(1) {
   border-top-left-radius: 0.625rem;
   border-bottom-left-radius: 0.625rem;
@@ -105,31 +98,27 @@
 }
 
 .plan__name {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .plan__price {
+  font-size: 4.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 4.5rem;
   color: var(--dark-grayish-blue);
   margin-bottom: 2rem;
 }
 
 .plan__price span {
-  font-size: 2.5rem;
-}
-
-.plan__list {
-  list-style: none;
+  font-size: 2.25rem;
 }
 
 .plan__list li {
-  padding-block: 1.25rem;
   border-top: 1px solid var(--light-grayish-blue);
+  padding-block: 1.25rem;
 }
 
 .plan__list li:last-child {
@@ -156,20 +145,16 @@
   border-color: var(--light-blue);
 }
 
-/*************/
-/* FOOTER */
-/*************/
-
 .footer {
-  padding: 4rem 0 2rem;
   text-align: center;
+  padding-block: 2rem;
 }
 
 .footer__text {
+  color: var(--grayish-blue);
   font-size: 0.8125rem;
-  color: var(--dark-grayish-blue);
 }
 
 .footer__text a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-blue);
 }

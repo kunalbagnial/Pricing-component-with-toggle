@@ -1,47 +1,28 @@
 @media (max-width: 59em) {
   body {
     background-image: url(../images/bg-top.svg);
-    background-repeat: no-repeat;
-    background-position: right -12rem top -2rem;
+    background-position: right -12.125rem top -2.25rem;
   }
 
   .pricing-container {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .plan {
-    width: 50%;
-    justify-self: center;
-  }
-
-  .plan:nth-child(1),
-  .plan:nth-child(3) {
+    padding: 1.875rem;
     border-radius: 0.625rem;
-  }
-
-  .plan--professional {
-    padding: 2rem;
   }
 }
 
 @media (max-width: 44em) {
-  .plan {
-    width: 60%;
+  .pricing-container {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 34em) {
-  .plan {
-    width: 100%;
-  }
-
   .plan__price {
-    font-size: 4.25rem;
-    gap: 0.25rem;
-  }
-
-  .plan__price span {
-    font-size: 2.25rem;
+    font-size: 4rem;
   }
 }
